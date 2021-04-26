@@ -1,3 +1,9 @@
-containers:
-- name: acrcasouso.azurecr.io/library/prueba
-  image: acrcasouso.azurecr.io/library/prueba
+version: '3'
+services:
+  docker-prueba:
+    image: acrcasouso.azurecr.io/library/prueba
+    container_name: docker-prueba
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+        - "3000:3000"
