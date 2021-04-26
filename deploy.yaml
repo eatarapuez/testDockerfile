@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: acrcasouso.azurecr.io/library/prueba
+      app: prueba
   replicas: 2 # indica al controlador que ejecute 2 pods
   template:
     metadata:
       labels:
-        app: acrcasouso.azurecr.io/library/prueba
+        app: prueba
     spec:
       containers:
       - name: acrcasouso.azurecr.io/library/prueba
