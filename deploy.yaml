@@ -13,7 +13,7 @@ spec:
         app: prueba
     spec:
       containers:
-      - name: acrcasouso.azurecr.io/library/prueba
+      - name: prueba
         image: acrcasouso.azurecr.io/library/prueba
         ports:
         - containerPort: 3000
