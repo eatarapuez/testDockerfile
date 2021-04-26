@@ -1,10 +1,19 @@
-version: '3'
+apiVersion: apps/v1 # Usa apps/v1beta2 para versiones anteriores a 1.9.0
 kind: Deployment
-services:
-  docker-prueba:
-    image: acrcasouso.azurecr.io/library/prueba
-    container_name: docker-prueba
-    environment:
-      ALLOW_EMPTY_PASSWORD: "yes"
-    ports:
-        - "3000:3000"
+metadata:
+  name: acrcasouso.azurecr.io/library/prueba
+spec:
+  selector:
+    matchLabels:
+      app: acrcasouso.azurecr.io/library/prueba
+  replicas: 2 # indica al controlador que ejecute 2 pods
+  template:
+    metadata:
+      labels:
+        app: acrcasouso.azurecr.io/library/prueba
+    spec:
+      containers:
+      - name: acrcasouso.azurecr.io/library/prueba
+        image: acrcasouso.azurecr.io/library/prueba
+        ports:
+        - containerPort: 3000
