@@ -1,3 +1,3 @@
 containers:
-- name: docker-prueba
+- name: acrcasouso.azurecr.io/library/prueba
   image: acrcasouso.azurecr.io/library/prueba
