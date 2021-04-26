@@ -1,4 +1,5 @@
 version: '3'
+kind: Deployment
 services:
   docker-prueba:
     image: acrcasouso.azurecr.io/library/prueba
